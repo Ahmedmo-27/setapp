@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+:root {
+  --bg: #26262B;
+  --text: #ffffff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.nav-link {
+  font-family: "Avenir Next", system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.9px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.tryfree-btn {
+  box-sizing: border-box;
+  height: 32px;
+  padding: 5.5px 23px 6.5px 23px; /* exact figma paddings */
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+
+  font-family: "Avenir Next", system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-1440 {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3, h4 { font-family: Inter, ui-sans-serif, system-ui; }
+
+/* utility tweaks for pixel matching */
+.muted { color: #9ca3af }
+
+/* Navbar / primary navigation typography */
+.nav-typography {
+  font-family: "Avenir Next", Avenir, ui-sans-serif, system-ui;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 25.76px;
+  letter-spacing: 0.9px;
+  vertical-align: middle;
+  leading-trim: none;
+}
+
