@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import SetappIcon from "./SetappIcon";
 
+const NAV_CLASSES = "font-avenir font-[500] text-nav text-white";
+
 export default function Navbar() {
   return (
     <nav aria-label="Main navigation" className="w-full">
@@ -41,26 +43,29 @@ export default function Navbar() {
               </ul>
             </div>
 
-              {/* Divider: 1px x 20px with 30px gap around (matches spec feel) */}
-              <span
-                className="mx-[30px] h-[20px] w-px bg-white"
-                aria-hidden="true"
-              />
+            {/* Divider: 1px x 20px with 30px gap around (matches spec feel) */}
+            <span
+              className="mx-[30px] h-[20px] w-px bg-white"
+              aria-hidden="true"
+            />
 
             {/* Right: language + divider + sign in + button */}
             <div className="flex items-center">
               {/* Language item: height 21.5 with 4px padding */}
-              <div className="flex h-[21.5px] items-center px-[4px] mr-[20px]">
+              <div className="mr-[20px] flex h-[21.5px] items-center px-[4px]">
                 <LanguageMenu />
               </div>
 
               {/* Sign in */}
-              <a href="#" className="nav-link">
+              <a href="#" className={`${NAV_CLASSES} hover:opacity-80 transition`}>
                 Sign In
               </a>
 
               {/* Try free button block */}
-              <button type="button" className="tryfree-btn ml-[24px]">
+              <button
+                type="button"
+                className={`ml-[24px] box-border flex h-[32px] items-center justify-center rounded-[6px] border border-white px-[23px] pb-[6.5px] pt-[5.5px] ${NAV_CLASSES} hover:bg-white/10 transition`}
+              >
                 Try free
               </button>
             </div>
@@ -74,7 +79,10 @@ export default function Navbar() {
 function NavItem({ href, children, className = "" }) {
   return (
     <li className={`flex h-[35.76px] items-center ${className}`}>
-      <a href={href} className="nav-link hover:opacity-80 transition">
+      <a
+        href={href}
+        className={`${NAV_CLASSES} hover:opacity-80 transition`}
+      >
         {children}
       </a>
     </li>
@@ -115,11 +123,11 @@ function LanguageMenu() {
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-3 w-44 rounded-[10px] bg-[#1f2125] border border-white/10 shadow-[0_12px_30px_rgba(0,0,0,0.6)] py-2 z-50">
+        <div className="absolute right-0 mt-3 w-44 rounded-[10px] border border-white/10 bg-[#1f2125] py-2 z-50 shadow-[0_12px_30px_rgba(0,0,0,0.6)]">
           {languages.map((l) => (
             <button
               key={l.code}
-              className="w-full text-left px-3 py-2 hover:bg-white/5 flex items-center gap-3 text-sm text-white/90"
+              className="flex w-full items-center gap-3 px-3 py-2 text-left text-sm font-[500] text-white/90 hover:bg-white/5"
               onClick={() => setOpen(false)}
             >
               <span className="text-lg leading-none">{l.flag}</span>
