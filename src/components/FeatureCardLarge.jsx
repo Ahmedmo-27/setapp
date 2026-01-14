@@ -6,7 +6,7 @@ export default function FeatureCardLarge({ title, subtitle, iconSrc, imageSrc })
       {/* Top row: icon + text */}
       <div className="flex items-start gap-5">
         <div className="h-14 w-14 overflow-hidden rounded-2xl bg-white/80 shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
-          <img src={iconSrc} alt="" className="h-full w-full object-cover" />
+          <img src={iconSrc} alt="" className="h-full w-full object-cover" loading="lazy" />
         </div>
 
         <div>
@@ -24,6 +24,7 @@ export default function FeatureCardLarge({ title, subtitle, iconSrc, imageSrc })
             src={imageSrc}
             alt="feature screenshot"
             className="h-[360px] w-full object-cover md:h-[430px]"
+            loading="lazy"
           />
 
           {/* soft vignette like screenshot */}

@@ -1,46 +1,47 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
-import FeaturesGrid from './components/FeaturesGrid'
-import Testimonial from './components/Testimonial'
-import SocialProof from './components/SocialProof'
-import FinalCTA from './components/FinalCTA'
-import Footer from './components/Footer'
+
+// Lazy load below-the-fold components
+const FeaturesGrid = lazy(() => import('./components/FeaturesGrid'))
+const Testimonial = lazy(() => import('./components/Testimonial'))
+const SocialProof = lazy(() => import('./components/SocialProof'))
+const FinalCTA = lazy(() => import('./components/FinalCTA'))
+const Footer = lazy(() => import('./components/Footer'))
 
 export default function App() {
   return (
     <div className="min-h-screen" style={{backgroundColor: '#26262B'}}>
-      {/* Navbar stays in the centered container */}
-        <Navbar />
-      {/* Hero should span full browser width */}
+      <Navbar />
       <HeroSection />
 
-      {/* Hero-Features transition */}
-      <div className="mx-auto container-1440 px-8">
-        <main>
-          <section className="py-20">
-            <FeaturesGrid />
-          </section>
-        </main>
-      </div>
+      <Suspense fallback={<div className="h-40 bg-[#26262B]" />}>
+        {/* Hero-Features transition */}
+        <div className="mx-auto container-1440 px-8">
+          <main>
+            <section className="py-20">
+              <FeaturesGrid />
+            </section>
+          </main>
+        </div>
 
-      {/* Video Testimonial Carousel - Full Width and handles the transition to white */}
-      <Testimonial/>
+        {/* Video Testimonial Carousel - Full Width and handles the transition to white */}
+        <Testimonial/>
 
-      {/* White background section - Blending from Video Testimonial down to Footer */}
-      <div className="bg-[#FEFEFE] w-full">
-        <main className="mx-auto container-1440 px-8">
-          <section className="py-12">
-            <SocialProof />
-          </section>
+        {/* White background section - Blending from Video Testimonial down to Final CTA */}
+        <div className="bg-[#FEFEFE] w-full">
+          <main className="mx-auto container-1440 px-8">
+            <section className="py-12">
+              <SocialProof />
+            </section>
+          </main>
+          
+          {/* Final CTA with split background for transition to Footer */}
+          <FinalCTA />
+        </div>
 
-          <section className="py-24">
-            <FinalCTA />
-          </section>
-        </main>
-      </div>
-
-      <Footer />
+        <Footer />
+      </Suspense>
     </div>
   )
 }

@@ -38,6 +38,7 @@ export default function FeatureCardSmall({
           src={imageSrc}
           alt={title}
           className="h-full w-full object-cover"
+          loading="lazy"
         />
         
         {/* Play button overlay */}
@@ -61,6 +62,7 @@ export default function FeatureCardSmall({
             src={iconSrc} 
             alt="icon" 
             className="w-[80px] h-[80px] flex-none order-0"
+            loading="lazy"
           />
         )}
 
