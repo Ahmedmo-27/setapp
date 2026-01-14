@@ -11,7 +11,12 @@ export default function FeatureCardSmall({
   const isBlue = variant === "blue";
   
   // Container styles
-  const baseStyles = "w-[580px] h-[632.6px] rounded-[20px] flex flex-col justify-between items-start pb-[59.54px] gap-[7.4px] overflow-hidden isolation-isolate";
+  // Light: pb-[59.54px], Height 632.6px, Text Bottom (Image Order 0)
+  // Blue: pt-[60px], Height 633px, Text Top (Image Order 1)
+  const baseStyles = `w-[580px] rounded-[20px] flex flex-col justify-between items-start overflow-hidden isolation-isolate shadow-[0_30px_80px_rgba(0,0,0,0.45)] ${
+    isBlue ? "h-[633px] pt-[60px]" : "h-[632.6px] pb-[59.54px]"
+  }`;
+  
   const colorStyles = isBlue
     ? "bg-[#2f476e]"
     : "bg-[#F4F0E4]";
@@ -20,11 +25,15 @@ export default function FeatureCardSmall({
   const titleColor = isBlue ? "text-white" : "text-[#26262B]";
   const subtitleColor = isBlue ? "text-white/75" : "text-[#26262B]";
 
+  // Order utilities
+  const imageOrder = isBlue ? "order-1" : "order-0";
+  const infoOrder = isBlue ? "order-0" : "order-1";
+
   return (
     <article className={`${baseStyles} ${colorStyles}`}>
       
-      {/* Image Container (Order 0) */}
-      <div className="relative w-[580px] h-[400.52px] flex-none order-0 z-10">
+      {/* Image Container */}
+      <div className={`relative w-[580px] h-[400.52px] flex-none z-10 ${imageOrder}`}>
         <img
           src={imageSrc}
           alt={title}
@@ -43,8 +52,8 @@ export default function FeatureCardSmall({
         )}
       </div>
 
-      {/* Info Container (Order 1) */}
-      <div className="flex flex-col items-start px-[60px] gap-[19px] w-[580px] h-[172.54px] flex-none order-1 z-0">
+      {/* Info Container */}
+      <div className={`flex flex-col items-start px-[60px] gap-[19px] w-[580px] h-[172.54px] flex-none z-0 ${infoOrder}`}>
         
         {/* Icon */}
         {iconSrc && (
@@ -56,14 +65,14 @@ export default function FeatureCardSmall({
         )}
 
         {/* Text Wrapper */}
-        <div className="flex flex-col items-start pr-[77px] w-[460px] h-[73.54px] flex-none order-1">
+        <div className="flex flex-col items-start pr-[28px] w-[460px] h-[73.54px] flex-none order-1">
           <h3
-            className={`font-['Avenir_Next'] font-semibold text-[26px] leading-[40px] flex items-center ${titleColor} -mt-[0.46px]`}
+            className={`font-avenir font-semibold text-[26px] leading-[40.04px] tracking-[0] flex items-center ${titleColor} -mt-[0.46px]`}
           >
             {title}
           </h3>
           <p
-            className={`font-['Avenir_Next'] font-normal text-[18px] leading-[32px] flex items-center ${subtitleColor}`}
+            className={`font-avenir font-normal text-[18px] leading-[32.04px] tracking-[0] flex items-center ${subtitleColor}`}
           >
             {subtitle}
           </p>
