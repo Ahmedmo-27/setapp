@@ -47,26 +47,26 @@ const SmallIcon = ({ type, color }) => {
 export default function TestimonialCarousel() {
   return (
     <div className="w-full">
-      <div className="flex flex-wrap justify-center lg:justify-between gap-[20px]">
+      <div className="flex flex-wrap justify-center gap-8">
         {testimonials.map((t, i) => (
-          <div key={i} className="w-[380px] h-[422px] bg-[#F5F5F5] rounded-[15px] flex flex-col p-[8px] relative group border border-transparent hover:border-gray-200 transition-all shadow-sm hover:shadow-md">
-            <div className={`h-[290px] ${t.bgColor} rounded-[8px] p-[38px] flex items-center`}>
-              <p className="font-avenir font-medium text-[26px] leading-[37px] text-white">
+          <div key={i} className="w-full max-w-[380px] min-h-[422px] bg-[#F5F5F5] rounded-[15px] flex flex-col p-[8px] relative group border border-transparent hover:border-gray-200 transition-all shadow-sm hover:shadow-md">
+            <div className={`flex-1 md:h-[290px] ${t.bgColor} rounded-[8px] p-[20px] md:p-[38px] flex items-center`}>
+              <p className="font-avenir font-medium text-[20px] md:text-[26px] leading-tight md:leading-[37px] text-white">
                 "{t.quote}"
               </p>
             </div>
             
-            <div className="flex-1 flex items-center px-[22px] relative mt-[20px]">
+            <div className="flex items-center px-4 py-6">
                <div className="w-[50px] h-[50px] rounded-full bg-gray-300 flex items-center justify-center text-gray-500 font-bold text-xl mr-4 shrink-0 overflow-hidden relative">
                  <span className="z-10">{t.initials}</span>
                </div>
                
                <div className="flex flex-col">
-                 <span className="font-avenir font-semibold text-[18px] text-[#26262B] leading-[32px]">{t.name}</span>
-                 <span className="font-avenir font-semibold text-[14px] text-[#9F9F9F] leading-[25px]">{t.handle}</span>
+                 <span className="font-avenir font-semibold text-[16px] md:text-[18px] text-[#26262B] leading-tight">{t.name}</span>
+                 <span className="font-avenir font-semibold text-[14px] text-[#9F9F9F] leading-tight mt-1">{t.handle}</span>
                </div>
                
-               <div className="ml-auto mb-[25px]">
+               <div className="ml-auto">
                  <SmallIcon type={t.socialIcon} color={t.iconColor} />
                </div>
             </div>
@@ -78,13 +78,14 @@ export default function TestimonialCarousel() {
          {[...Array(6)].map((_,i) => (
            <button 
              key={i} 
+             aria-label={`Go to slide ${i + 1}`}
              className={`w-[12px] h-[12px] rounded-[6px] ${i === 0 ? 'bg-[#1D1D22]' : 'bg-[#D5D4D4]'}`}
            />
          ))}
       </div>
       
       {/* Bottom Divider Line - Centered breakout */}
-      <div className="w-screen h-[2px] bg-black/20 mt-[120px] relative left-1/2 -translate-x-1/2" />
+      <div className="w-full max-w-screen h-[2px] bg-black/10 mt-12 md:mt-[120px]" />
     </div>
   )
 }

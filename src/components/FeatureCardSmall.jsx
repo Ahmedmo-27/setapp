@@ -11,10 +11,8 @@ export default function FeatureCardSmall({
   const isBlue = variant === "blue";
   
   // Container styles
-  // Light: pb-[59.54px], Height 632.6px, Text Bottom (Image Order 0)
-  // Blue: pt-[60px], Height 633px, Text Top (Image Order 1)
-  const baseStyles = `w-[580px] rounded-[20px] flex flex-col justify-between items-start overflow-hidden isolation-isolate shadow-[0_30px_80px_rgba(0,0,0,0.45)] ${
-    isBlue ? "h-[633px] pt-[60px]" : "h-[632.6px] pb-[59.54px]"
+  const baseStyles = `w-full max-w-[580px] rounded-[20px] flex flex-col justify-between items-start overflow-hidden isolation-isolate shadow-[0_30px_80px_rgba(0,0,0,0.45)] ${
+    isBlue ? "min-h-[500px] md:h-[633px] pt-8 md:pt-[60px]" : "min-h-[500px] md:h-[632.6px] pb-8 md:pb-[59.54px]"
   }`;
   
   const colorStyles = isBlue
@@ -33,7 +31,7 @@ export default function FeatureCardSmall({
     <article className={`${baseStyles} ${colorStyles}`}>
       
       {/* Image Container */}
-      <div className={`relative w-[580px] h-[400.52px] flex-none z-10 ${imageOrder}`}>
+      <div className={`relative w-full h-[300px] md:h-[400.52px] flex-none z-10 ${imageOrder}`}>
         <img
           src={imageSrc}
           alt={title}
@@ -46,7 +44,7 @@ export default function FeatureCardSmall({
           <button
             type="button"
             aria-label="Play"
-            className="absolute bottom-14 left-14 flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-[0_18px_40px_rgba(0,0,0,0.25)]"
+            className="absolute bottom-8 left-8 md:bottom-14 md:left-14 flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-[0_18px_40px_rgba(0,0,0,0.25)]"
           >
             <span className="ml-0.5 text-lg text-black">▶</span>
           </button>
@@ -54,27 +52,27 @@ export default function FeatureCardSmall({
       </div>
 
       {/* Info Container */}
-      <div className={`flex flex-col items-start px-[60px] gap-[19px] w-[580px] h-[172.54px] flex-none z-0 ${infoOrder}`}>
+      <div className={`flex flex-col items-start px-6 md:px-[60px] py-8 md:py-0 md:gap-[19px] w-full md:w-[580px] md:h-[172.54px] flex-none z-0 ${infoOrder}`}>
         
         {/* Icon */}
         {iconSrc && (
           <img 
             src={iconSrc} 
             alt="icon" 
-            className="w-[80px] h-[80px] flex-none order-0"
+            className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] flex-none order-0 mb-4 md:mb-0"
             loading="lazy"
           />
         )}
 
         {/* Text Wrapper */}
-        <div className="flex flex-col items-start pr-[28px] w-[460px] h-[73.54px] flex-none order-1">
+        <div className="flex flex-col items-start w-full md:w-[460px] flex-none order-1">
           <h3
-            className={`font-avenir font-semibold text-[26px] leading-[40.04px] tracking-[0] flex items-center ${titleColor} -mt-[0.46px]`}
+            className={`font-avenir font-semibold text-[22px] md:text-[26px] leading-tight md:leading-[40.04px] tracking-[0] flex items-center ${titleColor} md:-mt-[0.46px]`}
           >
             {title}
           </h3>
           <p
-            className={`font-avenir font-normal text-[18px] leading-[32.04px] tracking-[0] flex items-center ${subtitleColor}`}
+            className={`mt-2 font-avenir font-normal text-[16px] md:text-[18px] leading-snug md:leading-[32.04px] tracking-[0] flex items-center ${subtitleColor}`}
           >
             {subtitle}
           </p>

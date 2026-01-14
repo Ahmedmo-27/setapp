@@ -17,9 +17,9 @@ export default function App() {
 
       <Suspense fallback={<div className="h-40 bg-[#26262B]" />}>
         {/* Hero-Features transition */}
-        <div className="mx-auto container-1440 px-8">
+        <div className="mx-auto container-1440 px-4 md:px-8">
           <main>
-            <section className="py-20">
+            <section className="py-12 md:py-20">
               <FeaturesGrid />
             </section>
           </main>
@@ -30,7 +30,7 @@ export default function App() {
 
         {/* White background section - Blending from Video Testimonial down to Final CTA */}
         <div className="bg-[#FEFEFE] w-full">
-          <main className="mx-auto container-1440 px-8">
+          <main className="mx-auto container-1440 px-4 md:px-8">
             <section className="py-12">
               <SocialProof />
             </section>

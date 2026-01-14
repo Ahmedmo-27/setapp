@@ -2,15 +2,15 @@ import React from "react";
 
 export default function FeatureCardLarge({ title, subtitle, iconSrc, imageSrc }) {
   return (
-    <article className="rounded-[20px] bg-[#e2a0b6] p-[60px] shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+    <article className="rounded-[20px] bg-[#e2a0b6] p-8 md:p-[60px] shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
       {/* Top row: icon + text */}
-      <div className="flex items-start gap-5">
-        <div className="h-14 w-14 overflow-hidden rounded-2xl bg-white/80 shadow-[0_8px_20px_rgba(0,0,0,0.15)]">
+      <div className="flex flex-col sm:flex-row items-start gap-5">
+        <div className="h-14 w-14 overflow-hidden rounded-2xl bg-white/80 shadow-[0_8px_20px_rgba(0,0,0,0.15)] shrink-0">
           <img src={iconSrc} alt="" className="h-full w-full object-cover" loading="lazy" />
         </div>
 
         <div>
-          <h3 className="text-[26px] font-extrabold text-black/80">
+          <h3 className="text-[22px] md:text-[26px] font-extrabold text-black/80 leading-tight">
             {title}
           </h3>
           <p className="mt-2 text-[14px] text-black/60">{subtitle}</p>
@@ -23,7 +23,7 @@ export default function FeatureCardLarge({ title, subtitle, iconSrc, imageSrc })
           <img
             src={imageSrc}
             alt="feature screenshot"
-            className="h-[360px] w-full object-cover md:h-[430px]"
+            className="h-[250px] md:h-[430px] w-full object-cover"
             loading="lazy"
           />
 

@@ -78,7 +78,7 @@ const ITEMS = [
 
 export default function FloatingBadges() {
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0">
+    <div aria-hidden className="hidden md:block pointer-events-none absolute inset-0">
       {ITEMS.map((item) => (
         <img
           key={item.key}

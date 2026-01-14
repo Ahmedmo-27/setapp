@@ -6,7 +6,7 @@ export default function SetappIcon({ size = "navbar", className = "" }) {
     return (
       <span
         aria-hidden="true"
-        className={`relative block h-[160px] w-[160px] ${className}`}
+        className={`relative block h-[120px] w-[120px] md:h-[160px] md:w-[160px] ${className}`}
       >
 
         {/* Inner panel (bevel + subtle radial gradient) */}
@@ -27,7 +27,7 @@ export default function SetappIcon({ size = "navbar", className = "" }) {
         {/* Mark */}
         <svg
           viewBox="0 0 60 94"
-          className="absolute left-1/2 top-1/2 h-[94px] w-auto -translate-x-1/2 -translate-y-1/2"
+          className="absolute left-1/2 top-1/2 h-[70px] md:h-[94px] w-auto -translate-x-1/2 -translate-y-1/2"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >

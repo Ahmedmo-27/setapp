@@ -1,8 +1,8 @@
 import React from 'react';
 import TestimonialCarousel from './TestimonialCarousel';
 
-const SocialIcon = ({ path, viewBox, color }) => (
-  <a href="#" className="block w-12 h-12 transition-opacity hover:opacity-80">
+const SocialIcon = ({ path, viewBox, color, label }) => (
+  <a href="#" aria-label={label} className="block w-12 h-12 transition-opacity hover:opacity-80">
     <svg width="48" height="48" viewBox={viewBox} fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <clipPath id={`clip-${viewBox}`}>
@@ -20,16 +20,16 @@ export default function SocialProof() {
       <div className="container-1440 px-[30px] flex flex-col items-center">
         
         {/* Header Row */}
-        <div className="w-full max-w-[1200px] flex flex-col lg:flex-row relative mb-[60px]">
+        <div className="w-full max-w-[1200px] flex flex-col lg:flex-row justify-between items-start gap-8 mb-[60px]">
           {/* Left Title */}
-          <div className="lg:w-[500px] mb-6 lg:mb-0">
-            <h2 className="font-avenir font-semibold text-[36px] leading-[48px] tracking-[1.3px] text-[#26262B]">
+          <div className="max-w-[500px]">
+            <h2 className="font-avenir font-semibold text-[32px] md:text-[36px] leading-tight tracking-[1.3px] text-[#26262B]">
               Setapp in your words.
             </h2>
           </div>
 
           {/* Right Content */}
-          <div className="lg:absolute lg:right-0 lg:top-0 lg:w-[600px] flex flex-col md:flex-row justify-between items-start lg:ml-[100px]">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 lg:gap-12 w-full lg:w-auto">
              <div className="max-w-[300px]">
                 <p className="font-avenir font-normal text-[18px] leading-[32px] text-[#26262B]">
                   What you say about how Setapp powers you up.
@@ -37,9 +37,10 @@ export default function SocialProof() {
              </div>
              
              {/* Social Icons */}
-             <div className="flex gap-[10px] mt-4 md:mt-0">
+             <div className="flex gap-[10px] flex-wrap">
                {/* Facebook */}
                <SocialIcon 
+                 label="Facebook"
                  viewBox="1088 123 48 48"
                  color="#3A5792"
                  path={
@@ -50,6 +51,7 @@ export default function SocialProof() {
                />
                {/* Twitter */}
                <SocialIcon 
+                 label="Twitter"
                  viewBox="1146 123 48 48"
                  color="#2691D5"
                  path={
@@ -60,6 +62,7 @@ export default function SocialProof() {
                />
                {/* Instagram */}
                <SocialIcon 
+                 label="Instagram"
                  viewBox="1204 123 48 48"
                  color="#D41792"
                  path={
@@ -70,6 +73,7 @@ export default function SocialProof() {
                />
                {/* YouTube */}
                <SocialIcon 
+                 label="YouTube"
                  viewBox="1262 123 48 48"
                  color="#EB0C19"
                  path={
