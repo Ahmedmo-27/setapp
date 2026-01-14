@@ -3,7 +3,7 @@ import SetappIcon from './SetappIcon';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#2B2D32] text-white font-avenir pt-[60px] pb-[40px] flex justify-center">
+    <footer className="w-full bg-footer-bg text-white font-avenir pt-[60px] pb-[40px] flex justify-center">
       <div className="w-full max-w-[1440px] px-[30px] flex flex-col items-center">
         
         {/* Top Section */}
