@@ -2,10 +2,11 @@ import React from "react";
 import FeatureHeader from "./FeatureHeader";
 import FeatureCardLarge from "./FeatureCardLarge";
 import FeatureCardSmall from "./FeatureCardSmall";
+import Arrow from "/Arrow.svg";
 
 export default function FeaturesGrid() {
   return (
-    <section className="py-20">
+    <section className="py-0">
       <div className="mx-auto max-w-[1180px] px-4 md:px-0 relative border-t border-[#E5E5E5]">
         <FeatureHeader />
 
@@ -43,7 +44,7 @@ export default function FeaturesGrid() {
               href="#"
               className="inline-flex items-center gap-3 text-white/90 hover:text-white transition font-semibold mt-10"
             >
-              <span className="text-2xl leading-none">→</span>
+              <img src={Arrow} alt="Arrow" />
               <span className="text-lg">View all superpowers</span>
             </a>
           </div>

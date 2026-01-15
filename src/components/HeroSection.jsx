@@ -32,7 +32,7 @@ export default function HeroSection() {
 
         {/* Headline */}
         <h1
-          className="mb-8 md:mb-12 w-full max-w-[800px] font-avenir text-center text-[40px] md:text-[64px] font-bold leading-[1.1] md:leading-[67.84px] tracking-[1px] text-white"
+          className="mb-8 md:mb-12 w-full lg:w-[567px] lg:h-[204px] font-avenir text-center text-[40px] md:text-[64px] font-bold leading-[1.1] md:leading-[67.84px] tracking-[1px] text-white"
         >
           Dozens of apps.
           <br />
@@ -43,14 +43,14 @@ export default function HeroSection() {
 
         {/* CTA Buttons - Centered in the empty space */}
         <div className="flex flex-col sm:flex-row items-center gap-4">
-          <button className="flex h-[52px] w-[240px] sm:w-[210px] items-center justify-center rounded-[6px] border border-gray-200 bg-white text-[16px] font-medium text-[#26262b] shadow-sm hover:bg-gray-50 transition-colors">
+          <button className="flex h-[52px] w-full sm:w-[209.93px] items-center justify-center rounded-[6px] border border-gray-200 bg-white text-[16px] font-medium text-[#26262b] shadow-sm pt-[14px] pr-[30.93px] pb-[14px] pl-[32px] hover:bg-gray-50 transition-colors">
             Try free for 7 days
           </button>
 
           <div className="flex items-center gap-4">
             <button 
               aria-label="Sign up with Apple"
-              className="w-[62px] h-[52px] bg-white rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
+              className="w-[62px] h-[52px] bg-white rounded-[6px] border border-gray-200 flex items-center justify-center px-[15px] py-[10px] hover:bg-gray-100 transition-colors"
             >
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               {/* ... SVG content ... */}
@@ -72,7 +72,7 @@ export default function HeroSection() {
 
           <button 
             aria-label="Sign up with Google"
-            className="w-[62px] h-[52px] bg-white rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
+            className="w-[62px] h-[52px] bg-white rounded-[6px] border border-gray-200 flex items-center justify-center px-[15px] py-[10px] hover:bg-gray-100 transition-colors"
           >
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_1_649)">

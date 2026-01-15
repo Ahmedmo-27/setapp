@@ -16,7 +16,7 @@ const SocialIcon = ({ path, viewBox, color, label }) => (
 
 export default function SocialProof() {
   return (
-    <section className="bg-transparent pt-[120px] pb-[100px] flex justify-center">
+    <section className="bg-transparent pt-[20px] pb-[100px] flex justify-center">
       <div className="container-1440 px-[30px] flex flex-col items-center">
         
         {/* Header Row */}
