@@ -1,2 +1,3 @@
 User-agent: *
-Disallow: /
+Allow: /
+Sitemap: https://setapp-vert.vercel.app/sitemap.xml
