@@ -3,7 +3,7 @@ export default function FeatureHeader() {
     <div className="pt-20 flex flex-col md:flex-row justify-between items-start gap-8">
       {/* Heading Container */}
       <div className="w-full lg:w-[435px] lg:h-[52px]">
-        <h2 className="font-avenir text-[32px] md:text-[36px] font-semibold leading-tight md:leading-[51.84px] tracking-[1px] text-white align-middle">
+        <h2 className="whitespace-nowrap font-avenir text-[32px] md:text-[36px] font-semibold leading-tight md:leading-[51.84px] tracking-[1px] text-white align-middle">
           What you get on Setapp.
         </h2>
       </div>

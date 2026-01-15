@@ -8,10 +8,10 @@ export default function FeatureCardLarge({ title, subtitle, iconSrc, imageSrc })
         </div>
 
         <div>
-          <h3 className="font-avenir font-semibold text-[22px] md:text-[26px] leading-tight md:leading-[40.04px] text-black/80 w-full md:w-[252px] md:h-[41px] align-middle">
+          <h3 className="whitespace-nowrap font-avenir font-semibold text-[22px] md:text-[26px] leading-tight md:leading-[40.04px] text-black/80 w-full md:w-[252px] md:h-[41px] align-middle">
             {title}
           </h3>
-          <p className="mt-2 text-black/60 font-avenir font-normal text-[18px] leading-[32.04px] w-full md:w-[456px] md:h-[33px] align-middle">
+          <p className="mt-2 whitespace-nowrap text-black/60 font-avenir font-normal text-[18px] leading-[32.04px] w-full md:w-[456px] md:h-[33px] align-middle">
             {subtitle}
           </p>
         </div>

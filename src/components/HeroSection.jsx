@@ -29,27 +29,27 @@ export default function HeroSection() {
           </span>
         </div>
 
-        {/* Headline */}
-        <h1
-          className="mb-8 md:mb-12 w-full lg:w-[567px] lg:h-[204px] text-center text-[40px] md:text-[64px] font-bold leading-[1.1] md:leading-[67.84px] tracking-[1px] text-white"
-        >
-          Dozens of apps.
-          <br />
-          One subscription.
-          <br className="hidden md:block" />
-          <span className="md:inline"> $9.99</span>
-        </h1>
+        {/* Headline Container */}
+        <div className="w-full lg:w-[680px] lg:h-[204.51px] lg:max-w-[680px] lg:pr-[56.64px] lg:pl-[56.36px] lg:pb-[0.51px] flex items-center justify-center mb-8 md:mb-12">
+          <h1
+            className="w-full lg:w-[567px] lg:h-[204px] flex flex-col justify-center items-center text-center text-[40px] md:text-[64px] font-bold leading-[1.1] md:leading-[67.84px] tracking-[1px] text-white"
+          >
+            <span className="whitespace-nowrap">Dozens of apps.</span>
+            <span className="whitespace-nowrap">One subscription.</span>
+            <span className="whitespace-nowrap">$9.99</span>
+          </h1>
+        </div>
 
         {/* CTA Buttons - Centered in the empty space */}
         <div className="flex flex-col sm:flex-row items-center gap-4">
-          <button className="flex h-[52px] w-full sm:w-[209.93px] items-center justify-center rounded-[6px] border border-gray-200 bg-white text-[16px] font-medium text-[#26262b] shadow-btn pt-[14px] pr-[30.93px] pb-[14px] pl-[32px] hover:bg-gray-50 transition-colors">
+          <button className="flex h-[52px] w-full sm:w-[209.93px] items-center justify-center rounded-nav border border-gray-200 bg-white text-[16px] font-medium text-set-bg shadow-btn pt-[14px] pr-[30.93px] pb-[14px] pl-[32px] hover:bg-gray-50 transition-colors">
             Try free for 7 days
           </button>
 
           <div className="flex items-center gap-4">
             <button 
               aria-label="Sign up with Apple"
-              className="w-[62px] h-[52px] bg-white rounded-[6px] border border-gray-200 flex items-center justify-center px-[15px] py-[10px] hover:bg-gray-100 transition-colors"
+              className="w-[62px] h-[52px] bg-white rounded-nav border border-gray-200 flex items-center justify-center px-[15px] py-[10px] hover:bg-gray-100 transition-colors"
             >
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               {/* ... SVG content ... */}
@@ -71,7 +71,7 @@ export default function HeroSection() {
 
           <button 
             aria-label="Sign up with Google"
-            className="w-[62px] h-[52px] bg-white rounded-[6px] border border-gray-200 flex items-center justify-center px-[15px] py-[10px] hover:bg-gray-100 transition-colors"
+            className="w-[62px] h-[52px] bg-white rounded-nav border border-gray-200 flex items-center justify-center px-[15px] py-[10px] hover:bg-gray-100 transition-colors"
           >
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_1_649)">
@@ -96,7 +96,7 @@ export default function HeroSection() {
         </div>
 
         {/* Description */}
-        <p className="mt-[28px] w-[317px] h-[65px] font-avenir text-center text-[18px] leading-[32.04px] tracking-normal text-white">
+        <p className="mt-[28px] w-[317px] h-[65px] text-center text-[18px] leading-[32.04px] tracking-normal text-white">
           Power up your workflow with Setapp, a smart way to get apps.
         </p>
 
