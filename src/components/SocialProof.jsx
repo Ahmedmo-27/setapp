@@ -22,7 +22,7 @@ export default function SocialProof() {
         <div className="w-full max-w-[1200px] flex flex-col lg:flex-row justify-between items-start gap-8 mb-[60px]">
           {/* Left Title */}
           <div className="max-w-[500px]">
-            <h2 className="font-avenir font-semibold text-[32px] md:text-[36px] leading-tight tracking-[1.3px] text-[#26262B]">
+            <h2 className="font-semibold text-[32px] md:text-[36px] leading-tight tracking-[1.3px] text-[#26262B]">
               Setapp in your words.
             </h2>
           </div>
@@ -30,7 +30,7 @@ export default function SocialProof() {
           {/* Right Content */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 lg:gap-12 w-full lg:w-auto">
              <div className="max-w-[300px]">
-                <p className="font-avenir font-normal text-[18px] leading-[32px] text-[#26262B]">
+                <p className="font-normal text-[18px] leading-[32px] text-[#26262B]">
                   What you say about how Setapp powers you up.
                 </p>
              </div>

@@ -71,15 +71,15 @@ export default function TestimonialCarousel() {
         {testimonials.map((t, i) => (
           <div key={i} className="w-full max-w-[380px] min-h-[422px] bg-[#F5F5F5] rounded-[15px] flex flex-col p-[8px] relative group border border-transparent hover:border-gray-200 transition-all shadow-sm hover:shadow-md">
             <div className={`flex-1 md:h-[290px] ${t.bgColor} rounded-[8px] p-[20px] md:p-[38px] flex items-center`}>
-              <p className="w-full md:w-[322px] md:h-[222px] font-avenir font-medium text-[20px] md:text-[26px] leading-[30px] md:leading-[36.92px] tracking-normal text-white flex items-center">
+              <p className="w-full md:w-[322px] md:h-[222px] font-medium text-[20px] md:text-[26px] leading-[30px] md:leading-[36.92px] tracking-normal text-white flex items-center">
                 "{t.quote}"
               </p>
             </div>
             
             <div className="flex items-center px-4 py-6">
                 <div className="flex flex-col">
-                  <span className="font-avenir font-semibold text-[18px] text-[#26262B] leading-[32.04px] tracking-normal">{t.name}</span>
-                  <span className="font-avenir font-semibold text-[14px] text-[#9F9F9F] leading-[24.92px] tracking-normal">{t.handle}</span>
+                  <span className="font-semibold text-[18px] text-[#26262B] leading-[32.04px] tracking-normal">{t.name}</span>
+                  <span className="font-semibold text-[14px] text-[#9F9F9F] leading-[24.92px] tracking-normal">{t.handle}</span>
                 </div>
                
                <div className="ml-auto">
@@ -95,7 +95,7 @@ export default function TestimonialCarousel() {
            <button 
              key={i} 
              aria-label={`Go to slide ${i + 1}`}
-             className={`w-[12px] h-[12px] rounded-[6px] ${i === 0 ? 'bg-[#1D1D22]' : 'bg-[#D5D4D4]'}`}
+             className={`w-[12px] h-[12px] rounded-[6px] ${i === 0 ? 'bg-dot-active' : 'bg-dot-inactive'}`}
            />
          ))}
       </div>

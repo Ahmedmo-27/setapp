@@ -17,7 +17,7 @@ const FinalCTA = () => {
 
           {/* Pricing Text */}
           <h2 
-            className="mb-12 font-avenir font-semibold text-[32px] md:text-[46px] leading-tight md:leading-[59.8px] tracking-[1.3px] text-set-bg text-center md:text-left max-w-[800px]"
+            className="mb-12 font-semibold text-[32px] md:text-[46px] leading-tight md:leading-[59.8px] tracking-[1.3px] text-set-bg text-center md:text-left max-w-[800px]"
           >
             Superpowers starting $9.99/month.<br className="hidden md:block" /> Free for 7 days.
           </h2>
@@ -27,12 +27,12 @@ const FinalCTA = () => {
             className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto"
           >
             <button 
-              className="flex items-center justify-center px-[31px] py-[13px] w-full sm:w-auto h-[50px] bg-set-bg rounded-nav border-none cursor-pointer text-white font-avenir font-normal text-[16px] leading-[24px] tracking-[1px]"
+              className="flex items-center justify-center px-[31px] py-[13px] w-full sm:w-auto h-[50px] bg-set-bg rounded-nav border-none cursor-pointer text-white font-normal text-[16px] leading-[24px] tracking-[1px]"
             >
               Get started now
             </button>
             <button 
-              className="box-border flex items-center justify-center px-[31px] py-[13px] w-full sm:w-auto h-[50px] border border-set-bg bg-transparent rounded-nav cursor-pointer text-set-bg font-avenir font-normal text-[16px] leading-[24px] tracking-[1px]"
+              className="box-border flex items-center justify-center px-[31px] py-[13px] w-full sm:w-auto h-[50px] border border-set-bg bg-transparent rounded-nav cursor-pointer text-set-bg font-normal text-[16px] leading-[24px] tracking-[1px]"
             >
               More about Setapp
             </button>

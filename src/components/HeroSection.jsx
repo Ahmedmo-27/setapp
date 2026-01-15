@@ -23,7 +23,7 @@ export default function HeroSection() {
             />
             <span
               aria-hidden="true"
-              className="absolute inset-[10px] rounded-[22px] shadow-[0_0_0_1px_rgba(255,255,255,0.06)]"
+              className="absolute inset-[10px] rounded-[22px] shadow-logo-ring"
             />
             <SetappIcon size="hero" />
           </span>
@@ -31,7 +31,7 @@ export default function HeroSection() {
 
         {/* Headline */}
         <h1
-          className="mb-8 md:mb-12 w-full lg:w-[567px] lg:h-[204px] font-avenir text-center text-[40px] md:text-[64px] font-bold leading-[1.1] md:leading-[67.84px] tracking-[1px] text-white"
+          className="mb-8 md:mb-12 w-full lg:w-[567px] lg:h-[204px] text-center text-[40px] md:text-[64px] font-bold leading-[1.1] md:leading-[67.84px] tracking-[1px] text-white"
         >
           Dozens of apps.
           <br />
@@ -42,7 +42,7 @@ export default function HeroSection() {
 
         {/* CTA Buttons - Centered in the empty space */}
         <div className="flex flex-col sm:flex-row items-center gap-4">
-          <button className="flex h-[52px] w-full sm:w-[209.93px] items-center justify-center rounded-[6px] border border-gray-200 bg-white text-[16px] font-medium text-[#26262b] shadow-sm pt-[14px] pr-[30.93px] pb-[14px] pl-[32px] hover:bg-gray-50 transition-colors">
+          <button className="flex h-[52px] w-full sm:w-[209.93px] items-center justify-center rounded-[6px] border border-gray-200 bg-white text-[16px] font-medium text-[#26262b] shadow-btn pt-[14px] pr-[30.93px] pb-[14px] pl-[32px] hover:bg-gray-50 transition-colors">
             Try free for 7 days
           </button>
 

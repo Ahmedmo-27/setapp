@@ -9,7 +9,7 @@ export default function FeatureCardSmall({
   const isBlue = variant === "blue";
   
   // Container styles
-  const baseStyles = `w-full max-w-[580px] rounded-[20px] flex flex-col justify-between items-start overflow-hidden isolate shadow-[0_30px_80px_rgba(0,0,0,0.45)] ${
+  const baseStyles = `w-full max-w-1180 rounded-[20px] flex flex-col justify-between items-start overflow-hidden isolate shadow-premium ${
     isBlue ? "min-h-[500px] md:h-[633px] pt-8 md:pt-[60px]" : "min-h-[500px] md:h-[632.6px] pb-8 md:pb-[59.54px]"
   }`;
   
@@ -42,7 +42,7 @@ export default function FeatureCardSmall({
           <button
             type="button"
             aria-label="Play"
-            className="absolute bottom-8 left-8 md:bottom-14 md:left-14 flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-[0_18px_40px_rgba(0,0,0,0.25)]"
+            className="absolute bottom-8 left-8 md:bottom-14 md:left-14 flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-play"
           >
             <span className="ml-0.5 text-lg text-black">▶</span>
           </button>
@@ -65,12 +65,12 @@ export default function FeatureCardSmall({
         {/* Text Wrapper */}
         <div className="flex flex-col items-start w-full md:w-[460px] flex-none order-1">
           <h3
-            className={`font-avenir font-semibold text-[22px] md:text-[26px] leading-tight md:leading-[40.04px] tracking-[0] flex items-center ${titleColor} md:-mt-[0.46px]`}
+            className={`font-semibold text-[22px] md:text-[26px] leading-tight md:leading-[40.04px] tracking-[0] flex items-center ${titleColor} md:-mt-[0.46px]`}
           >
             {title}
           </h3>
           <p
-            className={`mt-2 font-avenir font-normal text-[16px] md:text-[18px] leading-snug md:leading-[32.04px] tracking-[0] flex items-center ${subtitleColor}`}
+            className={`mt-2 font-normal text-[16px] md:text-[18px] leading-snug md:leading-[32.04px] tracking-[0] flex items-center ${subtitleColor}`}
           >
             {subtitle}
           </p>

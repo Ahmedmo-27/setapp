@@ -6,7 +6,7 @@ import Arrow from "/Arrow.svg";
 export default function FeaturesGrid() {
   return (
     <section className="py-0">
-      <div className="mx-auto max-w-[1180px] px-4 md:px-0 relative border-t border-[#E5E5E5]">
+      <div className="mx-auto max-w-1180 px-4 md:px-0 relative border-t border-set-border">
         <FeatureHeader />
 
         <div className="md:pt-[100px] grid grid-cols-1 gap-5">
@@ -49,7 +49,7 @@ export default function FeaturesGrid() {
           </div>
 
           {/* Explore Setapp Info */}
-          <div className="w-full mt-20 border-b border-[#E5E5E5] pb-10">
+          <div className="w-full mt-20 border-b border-set-border pb-10">
             <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-20">
               <div className="max-w-[400px]">
                 <h3 className="font-semibold text-[28px] md:text-[36px] leading-tight tracking-[1px] text-white">

@@ -11,7 +11,7 @@ const Footer = lazy(() => import('./components/Footer'))
 
 export default function App() {
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#26262B'}}>
+    <div className="min-h-screen bg-set-bg">
       <Navbar />
       <HeroSection />
 
