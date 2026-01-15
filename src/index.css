@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 html, body, #root {
   height: 100%;
   overflow-x: hidden;
@@ -15,11 +17,11 @@ html, body, #root {
 body {
   background: var(--bg);
   color: var(--text);
+  font-family: 'Inter', "Avenir Next", Avenir, sans-serif;
 }
 
 .nav-link {
   font-style: normal;
-  font-weight: 500;
   font-size: 14px;
   line-height: 26px;
   letter-spacing: 0.9px;
@@ -36,7 +38,6 @@ body {
   border-radius: 6px;
 
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 1px;
@@ -59,12 +60,11 @@ h1, h2, h3, h4 { font-family: inherit; }
 
 /* Navbar / primary navigation typography */
 .nav-typography {
-  font-weight: 500;
-  font-style: normal;
+  font-family: inherit;
   font-size: 14px;
   line-height: 25.76px;
   letter-spacing: 0.9px;
   vertical-align: middle;
-  leading-trim: none;
+  text-transform: none;
 }
 

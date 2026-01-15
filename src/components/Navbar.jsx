@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import SetappIcon from "./SetappIcon";
+import LanguageMenu from "./LanguageMenu";
 
-const NAV_CLASSES = "font-avenir font-[500] text-nav text-white";
+const NAV_CLASSES = "nav-typography font-medium text-white hover:opacity-80 transition";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,9 +45,9 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Right: language + divider + sign in + button */}
-          <div className="hidden lg:flex items-center ml-[30px]">
+          <div className="hidden lg:flex items-center">
             <span
-              className="h-[20px] w-px bg-white/20 mx-[30px]"
+              className="h-[20px] w-px bg-white/20 mx-[20px]"
               aria-hidden="true"
             />
             <div className="mr-[20px] flex h-[21.5px] items-center px-[4px]">
@@ -59,7 +60,7 @@ export default function Navbar() {
 
             <button
               type="button"
-              className={`ml-[24px] box-border flex h-[32px] items-center justify-center rounded-[6px] border border-white px-[23px] pb-[6.5px] pt-[5.5px] ${NAV_CLASSES} hover:bg-white/10 transition whitespace-nowrap`}
+              className={`ml-[24px] box-border flex h-[32px] items-center justify-center rounded-[6px] border border-white px-[23px] pb-[6.5px] pt-[5.5px] ${NAV_CLASSES} font-normal hover:bg-white/10 transition whitespace-nowrap`}
             >
               Try free
             </button>
@@ -130,53 +131,4 @@ function NavItem({ href, children, className = "" }) {
   );
 }
 
-function LanguageMenu() {
-  const [open, setOpen] = useState(false);
-  const ref = useRef(null);
 
-  const languages = [
-    { code: "en", label: "English", flag: "🇺🇸" },
-    { code: "es", label: "Español", flag: "🇪🇸" },
-    { code: "pl", label: "Polski", flag: "🇵🇱" },
-    { code: "de", label: "Deutsch", flag: "🇩🇪" },
-    { code: "fr", label: "Français", flag: "🇫🇷" },
-  ];
-
-  useEffect(() => {
-    function onDoc(e) {
-      if (ref.current && !ref.current.contains(e.target)) setOpen(false);
-    }
-    document.addEventListener("click", onDoc);
-    return () => document.removeEventListener("click", onDoc);
-  }, []);
-
-  return (
-    <div className="relative" ref={ref}>
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        className="flex items-center gap-2"
-        aria-haspopup="menu"
-        aria-expanded={open}
-      >
-        <span className="block text-[18px] leading-none">🇺🇸</span>
-        <span className="lg:hidden text-white font-avenir text-nav">English</span>
-      </button>
-
-      {open && (
-        <div className="absolute right-0 lg:right-0 mt-3 w-44 rounded-[10px] border border-white/10 bg-[#1f2125] py-2 z-50 shadow-[0_12px_30px_rgba(0,0,0,0.6)]">
-          {languages.map((l) => (
-            <button
-              key={l.code}
-              className="flex w-full items-center gap-3 px-3 py-2 text-left text-sm font-[500] text-white/90 hover:bg-white/5"
-              onClick={() => setOpen(false)}
-            >
-              <span className="text-lg leading-none">{l.flag}</span>
-              <span>{l.label}</span>
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}

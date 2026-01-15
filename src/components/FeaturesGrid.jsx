@@ -9,7 +9,7 @@ export default function FeaturesGrid() {
       <div className="mx-auto max-w-[1180px] px-4 md:px-0 relative border-t border-[#E5E5E5]">
         <FeatureHeader />
 
-        <div className="pt-20 md:pt-[233px] grid grid-cols-1 gap-5">
+        <div className="md:pt-[100px] grid grid-cols-1 gap-5">
           {/* Big card */}
           <FeatureCardLarge
             title="Keep your Mac clean"
@@ -41,7 +41,7 @@ export default function FeaturesGrid() {
           <div className="pt-6 text-center">
             <a
               href="#"
-              className="inline-flex items-center gap-3 text-white/90 hover:text-white transition font-semibold"
+              className="inline-flex items-center gap-3 text-white/90 hover:text-white transition font-semibold mt-10"
             >
               <span className="text-2xl leading-none">→</span>
               <span className="text-lg">View all superpowers</span>
@@ -50,14 +50,14 @@ export default function FeaturesGrid() {
 
           {/* Explore Setapp Info */}
           <div className="w-full mt-20 border-b border-[#E5E5E5] pb-10">
-            <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-20">
               <div className="max-w-[400px]">
                 <h3 className="font-semibold text-[28px] md:text-[36px] leading-tight tracking-[1px] text-white">
                   Your Setapp journey.
                 </h3>
               </div>
 
-              <div className="max-w-[600px]">
+              <div className="w-[600px] h-[68.34px] max-w-[600px] relative top-[-0.5px] pr-[132px] pb-[3.34px] pl-[10px]">
                 <p className="font-normal text-lg leading-[32px] text-white">
                   Type in your task into Setapp search and get instant app recommendations.
                 </p>

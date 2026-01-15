@@ -31,11 +31,11 @@ export default function FeatureCardSmall({
     <article className={`${baseStyles} ${colorStyles}`}>
       
       {/* Image Container */}
-      <div className={`relative w-full h-[300px] md:h-[400.52px] flex-none z-10 ${imageOrder}`}>
+      <div className={`relative w-full ${isBlue ? 'md:h-[360px]' : 'h-[250px] sm:h-[300px] md:h-[400.52px]'} flex-none z-10 px-4 md:px-0 ${imageOrder}`}>
         <img
           src={imageSrc}
           alt={title}
-          className="h-full w-full object-cover"
+          className={`h-full w-full object-contain ${isBlue ? 'object-bottom' : 'object-top'} md:object-cover`}
           loading="lazy"
         />
         

@@ -14,7 +14,20 @@ export default function HeroSection() {
       <div className="relative z-10 min-h-screen flex flex-col items-center pt-[80px] px-4">
         {/* Setapp Logo Icon */}
         <div className="mb-[30px] md:mb-[50px]">
-          <SetappIcon size="hero" />
+          <span
+            aria-hidden="true"
+            className="relative block h-[120px] w-[120px] md:h-[160px] md:w-[160px]"
+          >
+            <span
+              aria-hidden="true"
+              className="absolute inset-[10px] rounded-[22px] bg-black"
+            />
+            <span
+              aria-hidden="true"
+              className="absolute inset-[10px] rounded-[22px] shadow-[0_0_0_1px_rgba(255,255,255,0.06)]"
+            />
+            <SetappIcon size="hero" />
+          </span>
         </div>
 
         {/* Headline */}
@@ -84,7 +97,7 @@ export default function HeroSection() {
         </div>
 
         {/* Description */}
-        <p className="mt-[28px] max-w-[400px] w-full px-4 font-avenir text-center text-[18px] font-normal leading-relaxed text-white">
+        <p className="mt-[28px] w-[317px] h-[65px] font-avenir text-center text-[18px] leading-[32.04px] tracking-normal text-white">
           Power up your workflow with Setapp, a smart way to get apps.
         </p>
 

@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Avenir Next"', 'Avenir', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        avenir: ['"Avenir Next"', 'Avenir', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['Inter', '"Avenir Next"', 'Avenir', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        avenir: ['Inter', '"Avenir Next"', 'Avenir', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
         'set-bg': '#26262B',

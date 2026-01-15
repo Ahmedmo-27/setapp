@@ -1,29 +1,12 @@
 import React from "react";
 
 export default function SetappIcon({ size = "navbar", className = "" }) {
-  // HERO TILE (160x160) — matches the screenshot you sent
   if (size === "hero") {
     return (
       <span
         aria-hidden="true"
         className={`relative block h-[120px] w-[120px] md:h-[160px] md:w-[160px] ${className}`}
       >
-
-        {/* Inner panel (bevel + subtle radial gradient) */}
-        <span
-          className="
-            absolute inset-[10px] rounded-[22px]
-            bg-black "
-        />
-
-        {/* Soft edge ring */}
-        <span
-          className="
-            absolute inset-[10px] rounded-[22px]
-            shadow-[0_0_0_1px_rgba(255,255,255,0.06)]
-          "
-        />
-
         {/* Mark */}
         <svg
           viewBox="0 0 60 94"
@@ -41,8 +24,8 @@ export default function SetappIcon({ size = "navbar", className = "" }) {
       </span>
     );
   }
-
-  // NAVBAR MARK ONLY (20x32-ish visual)
+  
+  // Navbar
   return (
     <span className={`inline-flex items-center justify-center ${className}`} aria-hidden="true">
       <svg

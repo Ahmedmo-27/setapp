@@ -2,7 +2,7 @@ import React from "react";
 
 export default function FeatureCardLarge({ title, subtitle, iconSrc, imageSrc }) {
   return (
-    <article className="rounded-[20px] bg-[#e2a0b6] p-8 md:p-[60px] shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+    <article className="w-full lg:w-[1180px] lg:h-[605px] flex flex-col justify-between rounded-[20px] bg-[#e2a0b6] p-8 md:px-[60px] md:pt-[60px] md:pb-0 shadow-[0_30px_80px_rgba(0,0,0,0.45)] overflow-hidden">
       {/* Top row: icon + text */}
       <div className="flex flex-col sm:flex-row items-start gap-5">
         <div className="h-14 w-14 overflow-hidden rounded-2xl bg-white/80 shadow-[0_8px_20px_rgba(0,0,0,0.15)] shrink-0">
@@ -10,25 +10,24 @@ export default function FeatureCardLarge({ title, subtitle, iconSrc, imageSrc })
         </div>
 
         <div>
-          <h3 className="text-[22px] md:text-[26px] font-extrabold text-black/80 leading-tight">
+          <h3 className="font-avenir font-semibold text-[22px] md:text-[26px] leading-tight md:leading-[40.04px] text-black/80 w-full md:w-[252px] md:h-[41px] align-middle">
             {title}
           </h3>
-          <p className="mt-2 text-[14px] text-black/60">{subtitle}</p>
+          <p className="mt-2 text-black/60 font-avenir font-normal text-[18px] leading-[32.04px] w-full md:w-[456px] md:h-[33px] align-middle">
+            {subtitle}
+          </p>
         </div>
       </div>
 
       {/* Big screenshot */}
-      <div className="mt-8 overflow-hidden rounded-[28px] bg-black/10">
-        <div className="relative">
+      <div className="mt-auto mx-auto w-full lg:w-[1106px] lg:h-[465px]">
+        <div className="relative h-full w-full">
           <img
             src={imageSrc}
             alt="feature screenshot"
-            className="h-[250px] md:h-[430px] w-full object-cover"
+            className="w-full h-full object-contain object-bottom"
             loading="lazy"
           />
-
-          {/* soft vignette like screenshot */}
-          <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.08)]" />
         </div>
       </div>
     </article>

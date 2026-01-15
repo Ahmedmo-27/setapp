@@ -1,5 +1,6 @@
 import React from 'react';
 import SetappIcon from './SetappIcon';
+import LanguageMenu from './LanguageMenu';
 
 export default function Footer() {
   return (
@@ -14,7 +15,7 @@ export default function Footer() {
             {/* Logo */}
             <div className="flex items-center gap-4">
               <div className="w-[20px] h-[32px] flex items-center overflow-hidden">
-                 <SetappIcon size="navbar" className="w-[32px] h-[50px] -ml-[6px]" />
+                 <SetappIcon size="navbar"/>
               </div>
               <span className="text-[24px] font-bold tracking-widest text-white mt-1">SETAPP</span>
             </div>
@@ -95,16 +96,8 @@ export default function Footer() {
            </div>
 
            {/* Language Switcher */}
-           <div className="flex items-center gap-2 cursor-pointer">
-              <div className="relative w-[18px] h-[18px] rounded-full overflow-hidden flex items-center justify-center bg-blue-900 border border-white/20">
-                 <div className="absolute inset-0 bg-[#bd3d44]"></div>
-                 <div className="absolute top-[20%] bottom-[20%] left-0 right-0 bg-white"></div>
-                 <div className="absolute top-0 bottom-[60%] left-0 right-[50%] bg-[#192f5d]"></div>
-              </div>
-              <span className="text-[16px] text-white">English</span>
-              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" className="ml-1">
-                 <path d="M1 1L5 5L9 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+           <div className="flex items-center gap-2">
+              <LanguageMenu variant="footer" />
            </div>
         </div>
 
