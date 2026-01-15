@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function FeatureHeader() {
   return (
     <div className="pt-20 flex flex-col md:flex-row justify-between items-start gap-8">

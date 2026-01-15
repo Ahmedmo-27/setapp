@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react'
+import { Suspense, lazy } from 'react'
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 

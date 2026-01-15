@@ -1,4 +1,3 @@
-import React from 'react';
 import TestimonialCarousel from './TestimonialCarousel';
 
 const SocialIcon = ({ path, viewBox, color, label }) => (

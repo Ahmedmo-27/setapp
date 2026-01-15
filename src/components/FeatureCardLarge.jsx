@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function FeatureCardLarge({ title, subtitle, iconSrc, imageSrc }) {
   return (
     <article className="w-full lg:w-[1180px] lg:h-[605px] flex flex-col justify-between rounded-[20px] bg-[#e2a0b6] p-8 md:px-[60px] md:pt-[60px] md:pb-0 shadow-[0_30px_80px_rgba(0,0,0,0.45)] overflow-hidden">

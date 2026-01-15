@@ -1,4 +1,3 @@
-import React from "react";
 import FloatingBadges from "./FloatingBadges";
 import SetappIcon from "./SetappIcon";
 

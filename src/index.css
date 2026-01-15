@@ -20,33 +20,6 @@ body {
   font-family: 'Inter', "Avenir Next", Avenir, sans-serif;
 }
 
-.nav-link {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 26px;
-  letter-spacing: 0.9px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-}
-
-.tryfree-btn {
-  box-sizing: border-box;
-  height: 32px;
-  padding: 5.5px 23px 6.5px 23px;
-  border: 1px solid #ffffff;
-  border-radius: 6px;
-
-  font-style: normal;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 1px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .container-1440 {
   max-width: 1440px;
   margin-left: auto;

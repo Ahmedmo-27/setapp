@@ -1,4 +1,3 @@
-import React from 'react';
 import SetappIcon from './SetappIcon';
 import LanguageMenu from './LanguageMenu';
 

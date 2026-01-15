@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function FeatureCardSmall({
   variant = "light",
   title,
@@ -11,7 +9,7 @@ export default function FeatureCardSmall({
   const isBlue = variant === "blue";
   
   // Container styles
-  const baseStyles = `w-full max-w-[580px] rounded-[20px] flex flex-col justify-between items-start overflow-hidden isolation-isolate shadow-[0_30px_80px_rgba(0,0,0,0.45)] ${
+  const baseStyles = `w-full max-w-[580px] rounded-[20px] flex flex-col justify-between items-start overflow-hidden isolate shadow-[0_30px_80px_rgba(0,0,0,0.45)] ${
     isBlue ? "min-h-[500px] md:h-[633px] pt-8 md:pt-[60px]" : "min-h-[500px] md:h-[632.6px] pb-8 md:pb-[59.54px]"
   }`;
   

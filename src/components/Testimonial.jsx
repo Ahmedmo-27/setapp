@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function VideoTestimonialCarousel() {
+export default function Testimonial() {
   const testimonial = {
     name: "Jason Staczek",
     description: "Musicians like Jason use Setapp to push the limits of their creativity, dancing through tasks for more time to play.",
